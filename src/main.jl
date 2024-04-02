@@ -121,8 +121,8 @@ function simmulated_2_opt_algorithm(dist_matrix, T=3000.0, cooling_rate=0.9997, 
 end
 
 function main()
-    n = 150
-    dist_matrix = generate_random_instance(n)
+    n = 20
+    X, Y, dist_matrix = generate_random_instance(n)
     println("-------------------------[Two-opt algorithm]-------------------------")
     ###########################[Accept the first improvement]###########################
     elapsed_time_direct = mean([@elapsed(two_opt_algorithm_first_improve(dist_matrix; calc_method = "direct")) for _ in 1:100])
@@ -156,4 +156,3 @@ function main()
 end
 
 main()
-

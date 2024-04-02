@@ -11,7 +11,7 @@ function generate_random_instance(n, seed = 1234)
             dist_matrix[j, i] = dist_matrix[i, j]
         end
     end
-    return dist_matrix
+    return x, y, dist_matrix
 end
 
 function initial_tour(n)
