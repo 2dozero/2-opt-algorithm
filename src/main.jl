@@ -90,6 +90,7 @@ function two_opt_algorithm_all_possible(dist_matrix; calc_method)
             improvement = true
         end
     end
+    # @show calc_tour_length(tour, dist_matrix)
     return tour
 end
 
@@ -117,6 +118,7 @@ function simmulated_2_opt_algorithm(dist_matrix, T=3000.0, cooling_rate=0.9997, 
         end
         T *= cooling_rate
     end
+    # @show calc_tour_length(tour, dist_matrix)
     return tour
 end
 
